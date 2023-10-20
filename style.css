@@ -11,44 +11,57 @@ html, body{
 }
 
 .main{
-    /* background-color: rgb(228, 241, 252); */
     position: relative;
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .elem{
-    height: 80vh;
+    height: 40vh;
     width: 18vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .elem img{
-    height: 150px;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
     position: absolute;
     scale: 0;
+    transition: all linear .2s;
+    opacity: 0;
+    z-index: -1;
 }
 
 .elem h1{
-    font-size: 70px;
+    font-size: 65px;
     font-weight: 900;
     color: #fff;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #000;
+    mix-blend-mode:difference;
 }
 
-.cursor{
+#cursor{
     width: 10px;
     height: 10px;
     background-color: #000;
     position: absolute;
     border-radius: 50%;
-    z-index: 1;
-    transition: linear .2s;
+    z-index: 99;
+    transition: all linear .2s;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #00000000;
 }
